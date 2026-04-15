@@ -1,0 +1,29 @@
+.card      { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+.card-dark { background: var(--bg-dark-card); border-radius: var(--radius-lg); overflow: hidden; }
+
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--blue); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; padding: 0.75rem 1.75rem; border-radius: 10px; border: none; cursor: pointer; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); letter-spacing: 0.01em; white-space: nowrap; text-decoration: none; user-select: none; }
+.btn-primary:hover    { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(43,75,255,0.3); }
+.btn-primary:active   { transform: translateY(0); box-shadow: none; }
+.btn-primary:disabled { background: var(--border-strong); color: var(--text-muted); cursor: not-allowed; transform: none; box-shadow: none; }
+
+.btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; color: var(--text-secondary); font-family: var(--font-body); font-weight: 500; font-size: 0.9rem; padding: 0.65rem 1.25rem; border-radius: 10px; border: 1px solid var(--border-strong); cursor: pointer; transition: border-color var(--transition), color var(--transition), background var(--transition); white-space: nowrap; user-select: none; }
+.btn-ghost:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+
+.btn-danger { display: inline-flex; align-items: center; justify-content: center; background: var(--red); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; padding: 0.65rem 1.5rem; border-radius: 10px; border: none; cursor: pointer; transition: background var(--transition), transform var(--transition); }
+.btn-danger:hover { background: #DC2626; transform: translateY(-1px); }
+
+.choice-card { background: var(--bg-card); border: 2px solid var(--border); border-radius: var(--radius-md); padding: 1rem; cursor: pointer; position: relative; transition: border-color var(--transition), box-shadow var(--transition); }
+.choice-card:hover    { border-color: rgba(43,75,255,0.4); box-shadow: 0 0 0 3px rgba(43,75,255,0.08); }
+.choice-card.selected { border-color: var(--blue);          box-shadow: 0 0 0 3px rgba(43,75,255,0.12); }
+.choice-card .check-badge { position: absolute; top: -10px; right: -10px; width: 22px; height: 22px; background: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; font-weight: 700; }
+
+.setup-input { width: 100%; padding: 0.6rem 0.85rem; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.95rem; color: var(--text-primary); background: var(--bg-card); transition: border-color var(--transition), box-shadow var(--transition); outline: none; }
+.setup-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(43,75,255,0.08); }
+.setup-input::placeholder { color: var(--text-muted); }
+
+.tag       { font-family: var(--font-body); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; padding: 0.28rem 0.8rem; border-radius: 999px; display: inline-flex; align-items: center; white-space: nowrap; }
+.tag-red   { background: var(--red);         color: #fff; }
+.tag-green { background: var(--green);       color: #fff; }
+.tag-blue  { background: var(--blue-light);  color: var(--blue); }
+.tag-amber { background: var(--amber-light); color: var(--amber); }
+.tag-dark  { background: rgba(255,255,255,0.15); color: #fff; }

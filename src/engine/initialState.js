@@ -1,0 +1,27 @@
+export function createInitialState(params = {}) {
+  return {
+    round:                 1,
+    phase:                 params.phase                 ?? 'landing',
+    companyName:           params.companyName           ?? 'Capital Corp',
+    tickerSymbol:          params.tickerSymbol          ?? 'CPCR',
+    sector:                params.sector                ?? 'technology',
+    difficultyMode:        params.difficultyMode        ?? 'normal',
+    riskAppetite:          params.riskAppetite          ?? 'balanced',
+    companyValue:          params.companyValue          ?? 10_000_000,
+    cashOnHand:            params.cashOnHand            ?? 2_000_000,
+    stakeholderConfidence: params.stakeholderConfidence ?? 60,
+    totalDebt:             params.totalDebt             ?? 3_000_000,
+    equityRetained:        params.equityRetained        ?? 100,
+    monthlyBurnRate:       params.monthlyBurnRate       ?? 240_000,
+    startingValue:         params.companyValue          ?? 10_000_000,
+    valueHistory:          [params.companyValue         ?? 10_000_000],
+    cashHistory:           [params.cashOnHand           ?? 2_000_000],
+    currentEvent:          null,
+    lastDecisions:         {},
+    pendingInvestment:     null,
+    prevMetrics:           null,
+    gameOver:              false,
+    gameOutcome:           null,
+    debriefText:           '',
+  }
+}
