@@ -1,4 +1,5 @@
 import ValueChart from '../components/ValueChart.jsx'
+import { downloadReport } from '../utils/downloadReport.js'
 
 const fmtM = (n) => `$${(n / 1_000_000).toFixed(2)}M`
 const CONF_LABEL = (c) => c >= 70 ? 'Elite' : c >= 45 ? 'Strong' : 'Average'
@@ -60,9 +61,9 @@ export default function EndScreen({ state, restart }) {
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-        <button className="btn-ghost">View Full Report</button>
+        
         <button className="btn-primary" onClick={restart}>Play Again ↺</button>
-        <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', cursor: 'pointer', marginLeft: 'auto' }}>Download Comprehensive Investment Deck</span>
+        <button className="btn-ghost" onClick={() => downloadReport(state)} style={{ fontSize: '0.9rem' }}>Download Comprehensive Investment Deck ↓</button>
       </div>
     </div>
   )
